@@ -1,5 +1,6 @@
 # Snowflake Training - Badge 2: Data Application Builders Workshop
 import streamlit
+import snowflake.connector
 
 streamlit.title("Healthy Diner Analysis")
 streamlit.header('Breakfast Favorites')
@@ -34,3 +35,5 @@ fruityvice_response = requests.get(f"https://fruityvice.com/api/fruit/{fruit_cho
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 # display visual
 streamlit.dataframe(fruityvice_normalized)
+
+
